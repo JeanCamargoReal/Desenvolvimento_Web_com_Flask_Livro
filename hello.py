@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, flash, redirect, render_template, session, url_for
+from flask import Flask, redirect, render_template, session, url_for
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
