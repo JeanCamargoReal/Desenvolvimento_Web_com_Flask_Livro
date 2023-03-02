@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, redirect, render_template, session, url_for
 from flask_bootstrap import Bootstrap
+from flask_migrate import Migrate
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
@@ -18,6 +19,7 @@ app.config["SECRET_KEY"] = "Super segredo de criptografia"
 db = SQLAlchemy(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
+migrate = Migrate(app, db)
 
 
 @app.route("/", methods=["GET", "POST"])
