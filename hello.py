@@ -90,7 +90,7 @@ def send_mail(to, subject, template, **kwargs):
     msg.body = render_template(template + '.txt', **kwargs)
     msg.html = render_template(template + '.html', **kwargs)
 
-    mail.send
+    mail.send(msg)
 
 
 class NameForm(FlaskForm):
